@@ -10,11 +10,16 @@ namespace TrafficSimulationSCEConsoleApp
     {
         static void Main(string[] args)
         {
-
-           var res1 = TrafficSim.ChangingTimeSim();
-           var res2 = TrafficSim.FixedTimeSim();
-            res1.PrintResult("Changing");
-            res2.PrintResult("Fixed");
+            Random rnd = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                var res1 = TrafficSim.ChangingTimeSim(rnd);
+                var res2 = TrafficSim.FixedTimeSim(rnd);
+                Console.WriteLine("----------------------------------------------------------");
+                res1.PrintResult("Changing");
+                res2.PrintResult("Fixed");
+                Console.WriteLine("----------------------------------------------------------");
+            }
             Console.ReadKey();
         }
 

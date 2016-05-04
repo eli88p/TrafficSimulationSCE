@@ -8,12 +8,11 @@ namespace TrafficSimulationSCEConsoleApp
 {
     public static class TrafficSim
     {
-        public static Result ChangingTimeSim()
+        public static Result ChangingTimeSim(Random rnd)
         {
 
             Road road = new Road();
             Binomial binomial = new Binomial();
-            Random rnd = new Random();
 
             /* first peak time 7 - 9 AM
              * 40 secounds of green light
@@ -193,12 +192,11 @@ namespace TrafficSimulationSCEConsoleApp
         }
 
 
-        public static Result FixedTimeSim()
+        public static Result FixedTimeSim(Random rnd)
         {
 
             Road road = new Road();
             Binomial binomial = new Binomial();
-            Random rnd = new Random();
 
             /* first peak time 7 - 9 AM
              * 30 secounds of green light
