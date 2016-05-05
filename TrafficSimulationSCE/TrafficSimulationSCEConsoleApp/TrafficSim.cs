@@ -188,7 +188,8 @@ namespace TrafficSimulationSCEConsoleApp
                 }
 
             }
-            return new Result(binomial.P / (binomial.P + binomial.Q), binomial.Q / (binomial.P + binomial.Q), road.TotalCarsMovement);
+            return new Result(binomial.P / (binomial.P + binomial.Q), binomial.Q / (binomial.P + binomial.Q), road.TotalCarsMovement
+                ,binomial.P,binomial.Q);
         }
 
 
@@ -372,7 +373,8 @@ namespace TrafficSimulationSCEConsoleApp
                 }
 
             }
-            return new Result(binomial.P / (binomial.P + binomial.Q), binomial.Q / (binomial.P + binomial.Q), road.TotalCarsMovement);
+            return new Result(binomial.P / (binomial.P + binomial.Q), binomial.Q / (binomial.P + binomial.Q), road.TotalCarsMovement
+                , binomial.P, binomial.Q);
         }
     }
 }

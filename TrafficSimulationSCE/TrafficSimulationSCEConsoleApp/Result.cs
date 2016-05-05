@@ -11,12 +11,16 @@ namespace TrafficSimulationSCEConsoleApp
         public double P { get; set; }
         public double Q { get; set; }
         public int TotalCarsPass { get; set; }
+        public double TotalSuccess { get; set; }
+        public double TotalFailure { get; set; }
 
-        public Result(double p, double q, int totalcar)
+        public Result(double p, double q, int totalcar,double ts,double tf)
         {
             P = p;
             Q = q;
             TotalCarsPass = totalcar;
+            TotalSuccess = ts;
+            TotalFailure = tf;
         }
 
         public void PrintResult(string type)
