@@ -32,7 +32,7 @@ namespace TrafficSimulationSCEConsoleApp
 
                 int outGoingCars = rnd.Next(0, road.GreenLightTime);
                 road.NumberOfCarsWaiting -= outGoingCars;
-
+                
                 if (road.NumberOfCarsWaiting < 0)
                 {
                     road.NumberOfCarsWaiting = 0;
@@ -186,10 +186,10 @@ namespace TrafficSimulationSCEConsoleApp
                 {
                     binomial.Q++;
                 }
-
             }
-            return new Result(binomial.P / (binomial.P + binomial.Q), binomial.Q / (binomial.P + binomial.Q), road.TotalCarsMovement
-                ,binomial.P,binomial.Q);
+            return new Result(binomial.P / (binomial.P + binomial.Q),
+                binomial.Q / (binomial.P + binomial.Q),
+                road.TotalCarsMovement, binomial.P,binomial.Q);
         }
 
 
